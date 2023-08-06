@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+
+  xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+  android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Favorites">
+  <include
+    layout="@layout/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+  <androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
+
+    <!-- The navigation drawer that comes from the left -->
+    <!-- Note that `android:layout_gravity` needs to be set to 'start' -->
+    <com.google.android.material.navigation.NavigationView
+      android:id="@+id/nvView"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_gravity="start"
+      android:background="@android:color/white"
+      app:menu="@menu/drawer_view" />
+
+  </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</LinearLayout>
